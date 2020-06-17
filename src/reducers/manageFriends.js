@@ -10,7 +10,6 @@ export function manageFriends(state={friends: []}, action){
                 }
             )
         case ('REMOVE_FRIEND'):
-            let index = state.friends.findIndex(friend => friend.id === action.id)
             let friendsCopy = {...state,
                                     friends: [...state.friends]}
             friendsCopy = friendsCopy.friends.filter(friend => friend.id !== action.id)
